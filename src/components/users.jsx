@@ -8,10 +8,13 @@ const Users = ({ users, ...rest }) => {
     const count = users.length;
     const pageSize = 4;
     const [currentPage, setCurrentPage] = useState(1);
+    
     const handlePageChange = (pageIndex) => {
         setCurrentPage(pageIndex);
     };
+    
     const userCrop = paginate(users, currentPage, pageSize);
+    
     return (
         <>
             {users.length > 0 && (
@@ -43,7 +46,9 @@ const Users = ({ users, ...rest }) => {
         </>
     );
 };
+
 Users.propTypes = {
     users: PropTypes.array.isRequired
 };
+
 export default Users;
