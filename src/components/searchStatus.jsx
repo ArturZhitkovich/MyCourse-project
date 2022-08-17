@@ -11,6 +11,7 @@ const SearchStatus = ({ length }) => {
         if ([2, 3, 4].indexOf(lastOne) >= 0) return "человека тусанут";
         return "человек тусанет";
     };
+    
     return (
         <h2>
             <span
@@ -23,7 +24,9 @@ const SearchStatus = ({ length }) => {
         </h2>
     );
 };
+
 SearchStatus.propTypes = {
     length: PropTypes.number.isRequired
 };
+
 export default SearchStatus;
